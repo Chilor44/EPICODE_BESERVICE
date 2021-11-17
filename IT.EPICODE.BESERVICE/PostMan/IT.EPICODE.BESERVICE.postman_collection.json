@@ -1,0 +1,795 @@
+{
+	"info": {
+		"_postman_id": "6daa9158-e2eb-4aec-aa80-9c32f808567b",
+		"name": "IT.EPICODE.BESERVICE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "caricamento_province",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/provinciaController/popola",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"provinciaController",
+						"popola"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "caricamento_comuni",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/comuneController/popola",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comuneController",
+						"popola"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "salvaIndirizzoParam",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"via\" : \"via Dateo\",\r\n    \"civico\" : \"4\",\r\n    \"cap\" : \"201\",\r\n    \"località\" : \"Milano\",\r\n    \"comune_nome\" : \"Milano\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/indirizzoController/salvaIndirizzo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"indirizzoController",
+						"salvaIndirizzo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "salvaClienteParam",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ragioneSociale\" : \"azienda 4 srl\",\r\n    \"partitaIva\" : \"9856244\",\r\n    \"tipoCliente\" : \"SRL\",\r\n    \"email\" : \"ciao4@ciao4.it\",\r\n    \"pec\": \"pec4@ciao.it\",\r\n    \"telefono\" : \"562159\",\r\n    \"nomeContatto\" : \"Elia\",\r\n    \"cognomeContatto\" : \"Viesi\",\r\n    \"telefonoContatto\" : \"15632\",\r\n    \"emailContatto\" : \"prismi2@prismi.it\",\r\n    \"indirizzoSedeOperativa_id\" : \"2\",\r\n    \"indirizzoSedeLegale_id\" : \"4\",\r\n    \"dataUltimoContatto\" : \"2021-02-04\",\r\n    \"fatturatoAnnuale\" : \"749624.666\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clienteController/salvaCliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clienteController",
+						"salvaCliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCliente",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"page\" : \"0\",\r\n    \"size\" : \"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clienteController/getAllCliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clienteController",
+						"getAllCliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "salvaIndirizzo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\"via\" : \"via Archimede\",\r\n  \"civico\" : \"14\",\r\n  \"cap\" : \"45861\",\r\n  \"localita\" : \"Dateo\",\r\n                    \"comune\" :  { \r\n                        \"id\" : \"145\",\r\n                        \"nome\" : \"Mathi\",\r\n                                    \"provincia\" : {\r\n                                        \"id\" : \"98\",\r\n                                            \"nome\" : \"Torino\",\r\n                                            \"sigla\" : \"TO\"\r\n                                    }\r\n                    }\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/indirizzoController/salvaIndirizzo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"indirizzoController",
+						"salvaIndirizzo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "salvaIndirizzo2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {  \"via\" : \"via Riva\",\r\n  \"civico\" : \"16\",\r\n  \"cap\" : \"25649\",\r\n  \"localita\" : \"Riva\",\r\n                    \"comune\" :  { \r\n                        \"id\" : \"422\",\r\n                        \"nome\" : \"Cerano\",\r\n                                    \"provincia\" : {\r\n                                        \"id\" : \"62\",\r\n                                            \"nome\" : \"Novara\",\r\n                                            \"sigla\" : \"NO\"\r\n                                    }\r\n                    }\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/indirizzoController/salvaIndirizzo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"indirizzoController",
+						"salvaIndirizzo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminaIndirizzo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/indirizzoController/eliminaIndirizzo/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"indirizzoController",
+						"eliminaIndirizzo",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "salvaCliente2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"ragioneSociale\": \"azienda 1 srl\",\r\n            \"partitaIva\": \"9856244\",\r\n            \"tipoCliente\": \"SRL\",\r\n            \"email\": \"ciao4@ciao.it\",\r\n            \"pec\": \"pec1@ciao.it\",\r\n            \"telefono\": \"562159\",\r\n            \"nomeContatto\": \"Chiara\",\r\n            \"cognomeContatto\": \"Lorenzi\",\r\n            \"telefonoContatto\": \"15632\",\r\n            \"emailContatto\": \"prismi4@prismi.it\",\r\n            \"indirizzoSedeOperativa\": \r\n            {\r\n                \"id\": \"2\",\r\n                \"via\": \"via Riva\",\r\n                \"civico\": \"16\",\r\n                \"cap\": \"25649\",\r\n                \"localita\": \"Riva\",\r\n                \"comune\": \r\n                {\r\n                    \"id\": \"422\",\r\n                    \"nome\": \"Cerano\",\r\n                    \"provincia\": \r\n                    {\r\n                        \"id\": \"62\",\r\n                        \"nome\": \"Novara\",\r\n                        \"sigla\": \"NO\"\r\n                    }\r\n                }\r\n            },\r\n            \r\n            \"indirizzoSedeLegale\": {\r\n                \"id\": \"2\",\r\n                \"via\": \"via Riva\",\r\n                \"civico\": \"16\",\r\n                \"cap\": \"25649\",\r\n                \"localita\": \"Riva\",\r\n                \"comune\": {\r\n                    \"id\": \"422\",\r\n                    \"nome\": \"Cerano\",\r\n                    \"provincia\": {\r\n                        \"id\": \"62\",\r\n                        \"nome\": \"Novara\",\r\n                        \"sigla\": \"NO\"\r\n                    }\r\n                }\r\n            },\r\n            \"dataInserimento\": \"2021-11-10\",\r\n            \"dataUltimoContatto\": \"2021-02-07\",\r\n            \"fatturatoAnnuale\": \"568921.754\"  \r\n            }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clienteController/salvaCliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clienteController",
+						"salvaCliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminaCliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clienteController/eliminaCliente/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clienteController",
+						"eliminaCliente",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCliente_sortBy_Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clienteController/getAllCliente?sort=id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clienteController",
+						"getAllCliente"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCliente_sortBy_Nome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clienteController/getAllCliente?sort=ragioneSociale",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clienteController",
+						"getAllCliente"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "ragioneSociale"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCliente_sortBy_fatturatoAnnuale",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clienteController/getAllCliente?sort=fatturatoAnnuale",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clienteController",
+						"getAllCliente"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "fatturatoAnnuale"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCliente_sortBy_dataUltimoContatto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clienteController/getAllCliente?sort=dataUltimoContatto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clienteController",
+						"getAllCliente"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "dataUltimoContatto"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCliente_sortBy_dataInserimento",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clienteController/getAllCliente?sort=dataInserimento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clienteController",
+						"getAllCliente"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "dataInserimento"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCliente_sortBy_provinciaSedeLegale",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clienteController/getAllCliente?sort=indirizzoSedeLegale_Comune_Provincia_Nome",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clienteController",
+						"getAllCliente"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "indirizzoSedeLegale_Comune_Provincia_Nome"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RicercaClienteBy_fatturatoAnnuale",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clienteController/getClienteByFatturatoAnnuale?fatturatoAnnuale=568921.754",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clienteController",
+						"getClienteByFatturatoAnnuale"
+					],
+					"query": [
+						{
+							"key": "fatturatoAnnuale",
+							"value": "568921.754"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RicercaClienteBy_nomeContains",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clienteController/getClienteByNomeContains?ragioneSociale=srl",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clienteController",
+						"getClienteByNomeContains"
+					],
+					"query": [
+						{
+							"key": "ragioneSociale",
+							"value": "srl"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCliente/id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\r\n        \"id\": 3,\r\n        \"ragioneSociale\": \"azienda 1 srl\",\r\n        \"partitaIva\": \"9856244\",\r\n        \"tipoCliente\": \"SRL\",\r\n        \"email\": \"ciao@ciao.it\",\r\n        \"pec\": \"pec1@ciao.it\",\r\n        \"telefono\": \"562159\",\r\n        \"nomeContatto\": \"Chiara\",\r\n        \"cognomeContatto\": \"Lorenzi\",\r\n        \"telefonoContatto\": \"15632\",\r\n        \"emailContatto\": \"prismi4@prismi.it\",\r\n        \"indirizzoSedeOperativa\": {\r\n            \"id\": 3,\r\n            \"via\": \"via Riva\",\r\n            \"civico\": \"16\",\r\n            \"cap\": \"25649\",\r\n            \"localita\": \"Riva\",\r\n            \"comune\": {\r\n                \"id\": 422,\r\n                \"nome\": \"Cerano\",\r\n                \"provincia\": {\r\n                    \"id\": 62,\r\n                    \"nome\": \"Novara\",\r\n                    \"sigla\": \"NO\"\r\n                }\r\n            }\r\n        },\r\n        \"indirizzoSedeLegale\": {\r\n            \"id\": 3,\r\n            \"via\": \"via Riva\",\r\n            \"civico\": \"16\",\r\n            \"cap\": \"25649\",\r\n            \"localita\": \"Riva\",\r\n            \"comune\": {\r\n                \"id\": 422,\r\n                \"nome\": \"Cerano\",\r\n                \"provincia\": {\r\n                    \"id\": 62,\r\n                    \"nome\": \"Novara\",\r\n                    \"sigla\": \"NO\"\r\n                }\r\n            }\r\n        },\r\n        \"dataInserimento\": \"2021-11-10\",\r\n        \"dataUltimoContatto\": \"2021-02-07\",\r\n        \"fatturatoAnnuale\": 568921.754\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clienteController/updateCliente/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clienteController",
+						"updateCliente",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "salvaStatoFattura",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\" : \"pagata\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/statoFatturaController/salvaStatoFattura",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"statoFatturaController",
+						"salvaStatoFattura"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "salvaFattura",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{     \"data\" : \"2019-03-05\",\r\n    \"numero\" : \"8495\",\r\n    \"anno\" : \"2020\",\r\n    \"importo\" : \"12864.35\",\r\n    \"stato\" :  { \"id\" : \"1\", \"nome\" : \"pagata\" },\r\n    \"cliente\" :  {\r\n            \"id\": \"4\",\r\n            \"ragioneSociale\": \"azienda 1 srl\",\r\n            \"partitaIva\": \"9856244\",\r\n            \"tipoCliente\": \"SRL\",\r\n            \"email\": \"ciao4@ciao.it\",\r\n            \"pec\": \"pec1@ciao.it\",\r\n            \"telefono\": \"562159\",\r\n            \"nomeContatto\": \"Chiara\",\r\n            \"cognomeContatto\": \"Lorenzi\",\r\n            \"telefonoContatto\": \"15632\",\r\n            \"emailContatto\": \"prismi4@prismi.it\",\r\n            \"indirizzoSedeOperativa\": \r\n            {\r\n                \"id\": \"3\",\r\n                \"via\": \"via Riva\",\r\n                \"civico\": \"16\",\r\n                \"cap\": \"25649\",\r\n                \"localita\": \"Riva\",\r\n                \"comune\": \r\n                {\r\n                    \"id\": \"422\",\r\n                    \"nome\": \"Cerano\",\r\n                    \"provincia\": \r\n                    {\r\n                        \"id\": \"62\",\r\n                        \"nome\": \"Novara\",\r\n                        \"sigla\": \"NO\"\r\n                    }\r\n                }\r\n            },\r\n            \"indirizzoSedeLegale\": {\r\n                \"id\": \"3\",\r\n                \"via\": \"via Riva\",\r\n                \"civico\": \"16\",\r\n                \"cap\": \"25649\",\r\n                \"localita\": \"Riva\",\r\n                \"comune\": {\r\n                    \"id\": \"422\",\r\n                    \"nome\": \"Cerano\",\r\n                    \"provincia\": {\r\n                        \"id\": \"62\",\r\n                        \"nome\": \"Novara\",\r\n                        \"sigla\": \"NO\"\r\n                    }\r\n                }\r\n            },\r\n            \"dataInserimento\": \"2021-11-10\",\r\n            \"dataUltimoContatto\": \"2021-02-07\",\r\n            \"fatturatoAnnuale\": \"568921.754\"  \r\n            }\r\n    \r\n}\r\n     \r\n\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/fatturaController/salvaFattura",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fatturaController",
+						"salvaFattura"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RicercaClienteBy_dataInserimento",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clienteController/getClienteByDataInserimento?dataInserimento=2021-11-10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clienteController",
+						"getClienteByDataInserimento"
+					],
+					"query": [
+						{
+							"key": "dataInserimento",
+							"value": "2021-11-10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "salvaFattura2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cliente\" :  {\r\n            \"id\": \"3\",\r\n        \"ragioneSociale\" : \"azienda 4 srl\",\r\n    \"partitaIva\" : \"456285\",\r\n    \"tipoCliente\" : \"SRL\",\r\n    \"email\" : \"ciao4@ciao.it\",\r\n    \"pec\": \"pec4@ciao.it\",\r\n    \"telefono\" : \"562159\",\r\n    \"nomeContatto\" : \"Elia4\",\r\n    \"cognomeContatto\" : \"Viesi\",\r\n    \"telefonoContatto\" : \"15632566\",\r\n    \"emailContatto\" : \"prismi4@prismi.it\",\r\n    \"indirizzoSedeOperativa\" :\r\n                {\r\n                    \"id\" : \"1\",\r\n                    \"via\" : \"via Archimede\",\r\n  \"civico\" : \"14\",\r\n  \"cap\" : \"45861\",\r\n  \"localita\" : \"Dateo\",\r\n                    \"comune\" :  { \r\n                        \"id\" : \"145\",\r\n                        \"nome\" : \"Mathi\",\r\n                                    \"provincia\" : {\r\n                                        \"id\" : \"98\",\r\n                                            \"nome\" : \"Torino\",\r\n                                            \"sigla\" : \"TO\"\r\n                                    }\r\n                    }\r\n },\r\n    \"indirizzoSedeLegale\" : \r\n                    {\"id\" : \"2\",\r\n                    \"via\" : \"via Riva\",\r\n  \"civico\" : \"16\",\r\n  \"cap\" : \"25649\",\r\n  \"localita\" : \"Riva\",\r\n                    \"comune\" :  { \r\n                        \"id\" : \"422\",\r\n                        \"nome\" : \"Cerano\",\r\n                                    \"provincia\" : {\r\n                                        \"id\" : \"62\",\r\n                                            \"nome\" : \"Novara\",\r\n                                            \"sigla\" : \"NO\"\r\n                                    }\r\n                    }\r\n }\r\n      }  ,\r\n        \"dataInserimento\" : \"2020-09-05\",\r\n    \"dataUltimoContatto\" : \"2020-02-07\",\r\n    \"fatturatoAnnuale\" : \"568421.666\"\r\n            },\r\n    \"data\" : \"2019-03-05\",\r\n    \"numero\" : \"8495\",\r\n    \"anno\" : \"2020\",\r\n    \"importo\" : \"12864.35€\",\r\n    \"stato\" :  { \"id\" : \"1\", \"nome\" : \"pagata\" }\r\n    \r\n}\r\n     \r\n\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/fatturaController/salvaFattura",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fatturaController",
+						"salvaFattura"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFatturaByClienteId?clienteId=3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fatturaController/getFatturaByClienteId?clienteId=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fatturaController",
+						"getFatturaByClienteId"
+					],
+					"query": [
+						{
+							"key": "clienteId",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFatturaByStato",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fatturaController/getFatturaByStato?stato=pagata",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fatturaController",
+						"getFatturaByStato"
+					],
+					"query": [
+						{
+							"key": "stato",
+							"value": "pagata"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFatturaByAnno",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fatturaController/getFatturaByAnno?anno=2020",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fatturaController",
+						"getFatturaByAnno"
+					],
+					"query": [
+						{
+							"key": "anno",
+							"value": "2020"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFatturaByData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fatturaController/getFatturaByData?data=2019-03-05",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fatturaController",
+						"getFatturaByData"
+					],
+					"query": [
+						{
+							"key": "data",
+							"value": "2019-03-05"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFatturaByImportoRange",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fatturaController/getFatturaByRange?importoMin=12000&importoMax=13000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fatturaController",
+						"getFatturaByRange"
+					],
+					"query": [
+						{
+							"key": "importoMin",
+							"value": "12000"
+						},
+						{
+							"key": "importoMax",
+							"value": "13000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
